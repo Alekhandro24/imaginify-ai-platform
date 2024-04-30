@@ -98,7 +98,7 @@ export declare type TransformationTypeKey =
   | "removeBackground";
 
 // ====== URL QUERY PARAMS
-declare type FormUrlQueryParams = {
+export declare type FormUrlQueryParams = {
   searchParams: string;
   key: string;
   value: string | number | null;
