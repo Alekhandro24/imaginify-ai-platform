@@ -20,7 +20,7 @@ export declare type UpdateUserParams = {
 };
 
 // ====== IMAGE PARAMS
-declare type AddImageParams = {
+export declare type AddImageParams = {
   image: {
     title: string;
     publicId: string;
@@ -38,7 +38,7 @@ declare type AddImageParams = {
   path: string;
 };
 
-declare type UpdateImageParams = {
+export declare type UpdateImageParams = {
   image: {
     _id: string;
     title: string;
@@ -57,7 +57,7 @@ declare type UpdateImageParams = {
   path: string;
 };
 
-declare type Transformations = {
+export declare type Transformations = {
   restore?: boolean;
   fillBackground?: boolean;
   remove?: {
@@ -74,14 +74,14 @@ declare type Transformations = {
 };
 
 // ====== TRANSACTION PARAMS
-declare type CheckoutTransactionParams = {
+export declare type CheckoutTransactionParams = {
   plan: string;
   credits: number;
   amount: number;
   buyerId: string;
 };
 
-declare type CreateTransactionParams = {
+export declare type CreateTransactionParams = {
   stripeId: string;
   amount: number;
   credits: number;
@@ -90,7 +90,7 @@ declare type CreateTransactionParams = {
   createdAt: Date;
 };
 
-declare type TransformationTypeKey =
+export declare type TransformationTypeKey =
   | "restore"
   | "fill"
   | "remove"
@@ -104,23 +104,23 @@ declare type FormUrlQueryParams = {
   value: string | number | null;
 };
 
-declare type UrlQueryParams = {
+export declare type UrlQueryParams = {
   params: string;
   key: string;
   value: string | null;
 };
 
-declare type RemoveUrlQueryParams = {
+export declare type RemoveUrlQueryParams = {
   searchParams: string;
   keysToRemove: string[];
 };
 
-declare type SearchParamProps = {
+export declare type SearchParamProps = {
   params: { id: string; type: TransformationTypeKey };
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-declare type TransformationFormProps = {
+export declare type TransformationFormProps = {
   action: "Add" | "Update";
   userId: string;
   type: TransformationTypeKey;
@@ -129,7 +129,7 @@ declare type TransformationFormProps = {
   config?: Transformations | null;
 };
 
-declare type TransformedImageProps = {
+export declare type TransformedImageProps = {
   image: any;
   type: string;
   title: string;
